@@ -9,6 +9,7 @@ import plotly.io as pio
 
 # Create a Dash app
 app = dash.Dash(__name__)
+server = app.server
 
 # Layout with a File Upload, Dropdown, and Graph
 app.layout = html.Div([
