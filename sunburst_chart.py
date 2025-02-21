@@ -53,6 +53,10 @@ def update_sunburst_chart(uploaded_file, selected_columns):
         content_type, content_string = uploaded_file.split(',')
         decoded = base64.b64decode(content_string)
         df = pd.read_excel(io.BytesIO(decoded))
+
+        url = "https://github.com/kevinb1/interactive_sunburst_chart/blob/main/mojo_data_chart.xlsx"
+        df = pd.read_excel(url)
+        
         df = df.fillna("geen antwoord beschikbaar")  # Fill missing values
 
         # Update the dropdown options with column names
